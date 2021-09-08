@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package cmsPackage;
+
+service agentService {
+    rpc create(Agent) returns (Agent) {};
+}
+
+message NOP {
+}
+
+message Agent {
+    int32 id = 1;
+    string name = 2;
+}
+
+message Agents {
+    repeated Agent agents = 1;
+}
